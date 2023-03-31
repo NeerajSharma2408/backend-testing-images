@@ -39,7 +39,9 @@ function SignUpForm(props) {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input name="userName" type="text" id="form3Example1c" className="form-control"/>
+                            <input name="userName" type="text" id="form3Example1c" className="form-control" onChange={(event)=>{
+                              setUserName(event.target.value)
+                            }}/>
                             <label className="form-label" htmlFor="form3Example1c">Your Name</label>
                           </div>
                         </div>
@@ -47,7 +49,9 @@ function SignUpForm(props) {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input name="userEmail" type="email" id="form3Example3c" className="form-control"/>
+                            <input name="userEmail" type="email" id="form3Example3c" className="form-control" onChange={(event)=>{
+                              setUserEmail(event.target.value)
+                            }}/>
                             <label className="form-label" htmlFor="form3Example3c">Your Email</label>
                           </div>
                         </div>
@@ -55,7 +59,9 @@ function SignUpForm(props) {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input name="userPass" type="password" id="form3Example4c" className="form-control"/>
+                            <input name="userPass" type="password" id="form3Example4c" className="form-control" onChange={(event)=>{
+                              setUserPass(event.target.value)
+                            }}/>
                             <label className="form-label" htmlFor="form3Example4c">Password</label>
                           </div>
                         </div>
@@ -63,13 +69,15 @@ function SignUpForm(props) {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-key fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input name="userPassCheck" type="password" id="form3Example4cd" className="form-control"/>
+                            <input name="userPassCheck" type="password" id="form3Example4cd" className="form-control" onChange={(event)=>{
+                              setUserPassCheck(event.target.value)
+                            }}/>
                             <label className="form-label" htmlFor="form3Example4cd">Repeat your password</label>
                           </div>
                         </div>
 
                         <div className="form-check d-flex justify-content-center mb-5">
-                          <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                          <input className="form-check-input me-2" type="checkbox" value="" id="form2Example3c"/>
                           <label className="form-check-label" htmlFor="form2Example3">
                             I agree all statements in <a href="#!">Terms of service</a>
                           </label>

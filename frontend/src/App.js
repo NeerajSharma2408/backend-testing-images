@@ -1,13 +1,14 @@
 import './App.css';
-import SignUpForm from './components/SignUpForm';
+import ImageForm from './components/ImageForm';
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 function App() {
 
   const router = createBrowserRouter([
-    // , element: <SignUpForm></SignUpForm>
-    {path: "/signup",element: <SignUpForm></SignUpForm>}
-  ])
+    {path: "/", element: <ImageForm></ImageForm>}
+  ]);
+
+  
   return (
     <div className="App">
       <RouterProvider router={router} />
